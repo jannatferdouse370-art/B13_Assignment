@@ -363,21 +363,6 @@ a {
     background: #180725;
 }
 
-.episodes::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: min(190px, 22vw);
-    height: 100%;
-    opacity: 0.55;
-    background: repeating-linear-gradient(
-        135deg,
-        rgba(0, 170, 255, 0.65) 0 5px,
-        transparent 5px 18px
-    );
-}
-
 .episodes-container {
     position: relative;
     z-index: 1;
@@ -569,10 +554,6 @@ a {
         padding: 72px 20px;
     }
 
-    .episodes::after {
-        width: 84px;
-    }
-
     .episode-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -612,10 +593,6 @@ a {
 
     .choose-card {
         padding: 26px;
-    }
-
-    .episodes::after {
-        opacity: 0.28;
     }
 
     .episode-info {
