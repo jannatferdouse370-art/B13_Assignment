@@ -281,6 +281,81 @@ a {
     text-transform: uppercase;
 }
 
+.choose {
+    padding: 92px 20px 96px;
+    background: #1a0a2b;
+}
+
+.choose-container {
+    width: min(1060px, 100%);
+    margin: 0 auto;
+}
+
+.choose h2 {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: clamp(32px, 4vw, 46px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    gap: 24px;
+}
+
+.choose-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+    padding: 32px;
+    border-radius: 8px;
+    background: #2b0e4e;
+}
+
+.choose-card img {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 18px;
+    object-fit: contain;
+}
+
+.choose-card h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.choose-card p {
+    color: rgba(255, 255, 255, 0.63);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.audio-card {
+    grid-column: span 4;
+    grid-row: span 2;
+    min-height: 330px;
+}
+
+.mobile-card,
+.community-card {
+    grid-column: span 8;
+}
+
+.interviews-card {
+    grid-column: span 8;
+}
+
+.resources-card {
+    grid-column: span 4;
+}
+
 @media (max-width: 768px) {
     .navbar {
         width: min(100% - 28px, 560px);
@@ -318,6 +393,25 @@ a {
         margin-top: 42px;
         padding-top: 42px;
     }
+
+    .choose {
+        padding: 72px 20px;
+    }
+
+    .choose-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .audio-card,
+    .mobile-card,
+    .community-card,
+    .interviews-card,
+    .resources-card {
+        grid-column: auto;
+        grid-row: auto;
+        min-height: 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -349,5 +443,9 @@ a {
 
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+
+    .choose-card {
+        padding: 26px;
     }
 }
